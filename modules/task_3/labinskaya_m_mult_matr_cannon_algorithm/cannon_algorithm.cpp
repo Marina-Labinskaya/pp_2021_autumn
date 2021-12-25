@@ -102,9 +102,9 @@ double* parallel_mult(int size, double* matr1, double* matr2) {
     double* local_matr2 = new double[block_size * block_size];
 
     MPI_Scatterv(matr1, sendcounts, displs, new_type, local_matr1,
-		block_size * block_size, MPI_DOUBLE, 0, decart_comm);
+    block_size * block_size, MPI_DOUBLE, 0, decart_comm);
     MPI_Scatterv(matr2, sendcounts, displs, new_type, local_matr2,
-		block_size * block_size, MPI_DOUBLE, 0, decart_comm);
+    block_size * block_size, MPI_DOUBLE, 0, decart_comm);
 
     int coords[2];
     MPI_Cart_coords(decart_comm, ProcRank, 2, coords);
