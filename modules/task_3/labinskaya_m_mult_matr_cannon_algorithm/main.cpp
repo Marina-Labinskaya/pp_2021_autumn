@@ -73,10 +73,10 @@ TEST(PARALLEL_MULT, compute_parallel_mult_correctly_with_random_matrix) {
         seq_res = sequantial_mult(size, matr1, matr2);
         t_end = MPI_Wtime();
         seq_t = t_end - t_st;
-	}
+    }
 
     if (ProcRank == 0) {
-		t_st = MPI_Wtime();
+        t_st = MPI_Wtime();
     }
     double* parallel_res = parallel_mult(size, matr1, matr2);
     if (ProcRank == 0) {

@@ -1,7 +1,7 @@
 // Copyright 2021 Labinskaya Marina
+#include <mpi.h>
 #include <vector>
 #include <ctime>
-#include <mpi.h>
 #ifndef MODULES_TASK_3_LABINSKAYA_M_MULT_MATR_CANNON_ALGORITHM_CANNON_ALGORITHM_H_
 #define MODULES_TASK_3_LABINSKAYA_M_MULT_MATR_CANNON_ALGORITHM_CANNON_ALGORITHM_H_
 

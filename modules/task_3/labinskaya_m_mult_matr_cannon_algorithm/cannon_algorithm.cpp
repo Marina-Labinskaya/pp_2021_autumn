@@ -119,8 +119,8 @@ double* parallel_mult(int size, double* matr1, double* matr2) {
     MPI_Sendrecv_replace(local_matr2, block_size * block_size, MPI_DOUBLE, up,
     1, down, 1, decart_comm, &status);
 
-   double* local_res = creating_zero_matrix(block_size);
-   double* temp_res = creating_zero_matrix(block_size);
+    double* local_res = creating_zero_matrix(block_size);
+    double* temp_res = creating_zero_matrix(block_size);
 
     for (int q = 0; q < block_num; q++) {
     temp_res = sequantial_mult(block_size, local_matr1, local_matr2);
